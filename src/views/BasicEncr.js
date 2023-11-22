@@ -100,7 +100,6 @@ export default function BasicEncr() {
                     <div className="col-lg-6 col-md-8 mx-auto">
                         <h1 className="fw-light">Conversión</h1>
                         <select className="form-select form-select-lg mb-3" value={opcionSeleccionada} onChange={handleSeleccion} aria-label=".form-select-lg example">
-                            <option selected value=" " >Seleccione una opción</option>
                             <option value="basico" >Basico</option>
                             <option value="binario">Binario</option>
                         </select>
