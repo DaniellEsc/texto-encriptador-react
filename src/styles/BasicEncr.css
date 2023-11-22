@@ -1,0 +1,22 @@
+.mensaje{
+    /* background: white; */
+    /* background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEg46bs7pSDY1rJD2i028lWJahE20AUvmm9hCzoBjvIb-mhWcH4yu5T047hZT9LVyRAjTRkmE0MsEfBy7kWZML2ZCQsAiurnskjYBlrEDunv8TLP4z1wR7bHRfjNnxEm5_8PyTb10-9w0B-8XIyFdgfgqjZsX_O9UBlpl24NA3TTg78tHixcnnzBBXIOvVY"); */
+    background-repeat:no-repeat ;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+}
+
+.mensaje:focus{
+    outline: none;
+}
+
+.text-area{
+    color: #0A3871;
+    text-transform: lowercase;
+}
+::placeholder{ color: #0A3871;}
+  .text-area:focus{
+    outline: none;
+  }
+
