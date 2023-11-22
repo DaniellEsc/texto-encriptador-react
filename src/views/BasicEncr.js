@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdOutlineNoEncryption } from "react-icons/md";
 import { CiUnlock } from "react-icons/ci";
 import { desencriptar, encriptar } from '../utils/functions/EncriptarFunc';
@@ -19,6 +19,10 @@ export default function BasicEncr() {
     const [encryptedText, setEncryptedText] = useState('');
     const [opcionSeleccionada, setOpcionSeleccionada] = useState('')
 
+    useEffect(() =>{
+        setOpcionSeleccionada('basico');
+    }, []);
+
 
     const handleSeleccion = (event) => {
         const valorSeleccionado = event.target.value;
@@ -30,7 +34,7 @@ export default function BasicEncr() {
     const seleccionEncriptar = () => {
         if (opcionSeleccionada === 'basico') {
             btnEncriptar();
-        }else if (opcionSeleccionada === 'binario') {
+        } else if (opcionSeleccionada === 'binario') {
             transformarBinary();
         }
 
@@ -39,7 +43,7 @@ export default function BasicEncr() {
     const seleccionDesncriptar = () => {
         if (opcionSeleccionada === 'basico') {
             btnDesencriptar();
-        }else if (opcionSeleccionada === 'binario') {
+        } else if (opcionSeleccionada === 'binario') {
             binarioTexto();
         }
     }
@@ -64,7 +68,7 @@ export default function BasicEncr() {
 
     }
 
-    const binarioTexto = () =>{
+    const binarioTexto = () => {
         const binario = desencriptarBinario(inputText);
         setEncryptedText(binario);
     }
@@ -96,6 +100,7 @@ export default function BasicEncr() {
                     <div className="col-lg-6 col-md-8 mx-auto">
                         <h1 className="fw-light">Conversión</h1>
                         <select className="form-select form-select-lg mb-3" value={opcionSeleccionada} onChange={handleSeleccion} aria-label=".form-select-lg example">
+                            <option selected value=" " >Seleccione una opción</option>
                             <option value="basico" >Basico</option>
                             <option value="binario">Binario</option>
                         </select>
